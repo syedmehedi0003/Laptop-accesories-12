@@ -1,61 +1,49 @@
 [
     {
-        "_id": 1,
         "name": "Battery for HP Elitebook",
         "price": "৳ 1,700 ",
         "description": "This laptop battery is compatible with HP Elitebook CS03XL TA03XL 840 G4 840 G3 745 G4 755 G4 laptop battery.",
         "available": "1000",
-        "order": "100",
         "supplier": "HP",
         "img": "./images/battery/img1.jpg"
     },
     {
-        "_id": 2,
         "name": "Battery for MacBook Pro Retina",
         "price": "৳ 6,500 ",
         "description": "This replacement laptop battery is for the MacBook Pro Retina 16-Inch A2141 (2019 year) release version 610-00533 MVVL2LL/A MVVM2LL/A and part numbers A2113 / A2141 / A2141. It's a Li-ion battery with a capacity of 8790mAh and a 98.8Wh capacity, as well as a 6-cell and 11.36V voltage.",
         "available": "1000",
-        "order": "100",
         "supplier": "Apple",
         "img": "./images/battery/img2.jpg"
     },
     {
-        "_id": 3,
         "name": "Laptop Battery for HP Laptop",
         "price": "৳ 1,500 ",
         "description": "CM03XL CO06XL laptop battery compatible with HP EliteBook 840 G1 / 840 G2 / 845 850 740 745 750 G1 G2 series.",
         "available": "1000",
-        "order": "100",
         "supplier": "HP",
         "img": "./images/battery/img3.jpg"
     },
     {
-        "_id": 4,
         "name": "Display for MacBook Pro M1 Retina",
         "price": "৳ 35,500 ",
         "description": "Assembly Replacement 13, display is compatible with MacBook Pro Retina A2338 Late 2020. It includes all of the small parts pre-installed in the assembly that save time and increase the quality.",
         "available": "1000",
-        "order": "100",
         "supplier": "Apple",
         "img": "./images/display/img1.jpg"
     },
     {
-        "_id": 5,
         "name": "Apple MacBook Pro A2337 Retina Display",
         "price": "৳ 26,000",
         "description": "Assembly replacement 13, retina display is compatible with MacBook Pro A2337. This MacBook Pro display camera works normally, the LCD screen is in perfect condition and the brightness adjustment works properly. The MacBook Pro display is available in 3 colors: Rose Gold, Space Gray, and Silver.",
         "available": "1000",
-        "order": "100",
         "supplier": "Apple",
         "img": "./images/display/img2.jpg"
     },
     {
-        "_id": 6,
         "name": "WiWU Privacy Protector for MacBook",
         "price": "৳ 3,250",
         "description": "The WiWU MacBook privacy protector comes with a multi-layered film filter to black out your screen, it also protects your eyes from harmful glare, UV, and blue light. The protector features anti-blue light, which adds an extra layer of protection to your eyes and improves eye comfort.",
         "available": "1000",
-        "order": "100",
         "supplier": "Apple",
         "img": "./images/display/img3.jpg"
     }

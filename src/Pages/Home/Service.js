@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './service.css';
 
 const Service = ({ service }) => {
-    const { name, price, description, available, order, img, supplier } = service;
+    const { _id, name, price, description, available, order, img, supplier } = service;
     return (
 
         <div className="card card-compact w-96 bg-base-100 shadow-xl border justify-items-center">
@@ -13,12 +14,25 @@ const Service = ({ service }) => {
                 <h2 className="card-title">{name}</h2>
                 <h3> <span className='font-bold'>Price:</span> {price}</h3>
                 <h3><span className='font-bold'>Description:</span>  {description}</h3>
-                <h3><span className='font-bold'>Available Quantity:</span>  {available}</h3>
-                <h3><span className='font-bold'>Minimum Order:</span> {order}</h3>
+                {/* <h3><span className='font-bold'>Available Quantity:</span> 
+                 {available}</h3> */}
+
+                <h3>{
+                    available.length < 1
+
+                        ? <span className='text-red-500'>Stock Out</span>
+                        : <span className='font-bold'>Available Quantity:{available}</span>
+                }</h3>
+
+
+                <h3><span className='font-bold'>Minimum Order 100 Pc</span> {order}</h3>
                 <h3> <span className='font-bold'>Brand:</span> {supplier}</h3>
 
                 <div className="card-actions justify-end">
-                    <button className="btn btn-secondary uppercase text-white font-bold buy-now">Buy Now</button>
+                    {/* <button className="btn btn-secondary uppercase text-white font-bold buy-now">Buy Now</button> 
+                    buy-now' to={`/order/${_id}`}>Buy Now</Link>*/}
+
+                    <Link disabled={available.length < 1} className='btn btn-secondary uppercase text-white font-bold buy-now' to={`/order/${_id}`}>Buy Now</Link>
                 </div>
             </div>
         </div>

@@ -14,13 +14,15 @@ const Navbar = () => {
 
     const menuItems = <>
         <li><Link to="/">Home</Link></li>
+        <li><Link to="/accessories">Accessories</Link></li>
+        <li><Link to="/order">Order Now</Link></li>
         <li><Link to="/review">Reviews</Link></li>
         <li><Link to="/contact">Contact Us</Link></li>
         <li><Link to="/about">About</Link></li>
 
     </>
     return (
-        <div className="navbar bg-base-100 justify-between">
+        <div className="navbar bg-base-100 justify-between mb-10">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex="0" className="btn btn-ghost lg:hidden">
