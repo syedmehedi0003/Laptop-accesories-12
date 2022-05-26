@@ -1,5 +1,5 @@
 import './App.css';
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Navbar from './Pages/Shared/Navbar';
 import Home from './Pages/Home/Home';
 import About from './Pages/Home/About';
@@ -9,6 +9,10 @@ import SignUp from './Pages/Login/SignUp';
 import RequireAuth from './Pages/Login/RequireAuth';
 import Services from './Pages/Home/Services';
 import Order from './Pages/Home/Order';
+import ServiceDetail from './Pages/Home/ServiceDetail';
+import AddProduct from './Pages/Home/AddProduct';
+import ManageProduct from './Pages/Home/ManageProduct';
+
 
 
 function App() {
@@ -22,11 +26,23 @@ function App() {
           <Route path="login" element={<Login />} />
           <Route path="signup" element={<SignUp />} />
           <Route path="accessories" element={<Services />} />
-          <Route path="order/:id" element={
+          <Route path="/product/:serviceId" element={<ServiceDetail>
+          </ServiceDetail>}></Route>
+
+          <Route path="order" element={
             <RequireAuth>
               <Order></Order>
             </RequireAuth>
           } />
+
+          <Route path="add" element={
+            <AddProduct></AddProduct>
+          } />
+
+          <Route path="manage" element={
+            <ManageProduct></ManageProduct>
+          } />
+
           <Route path="about" element={<RequireAuth> <About></About></RequireAuth>} />
 
         </Routes>

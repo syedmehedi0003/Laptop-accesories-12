@@ -1,9 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import './service.css';
 
 const Service = ({ service }) => {
     const { _id, name, price, description, available, order, img, supplier } = service;
+
+
+    const navigate = useNavigate();
+    const navigateToProductDetail = id => {
+        navigate(`/product/${id}`);
+    }
     return (
 
         <div className="card card-compact w-96 bg-base-100 shadow-xl border justify-items-center">
@@ -29,10 +36,13 @@ const Service = ({ service }) => {
                 <h3> <span className='font-bold'>Brand:</span> {supplier}</h3>
 
                 <div className="card-actions justify-end">
-                    {/* <button className="btn btn-secondary uppercase text-white font-bold buy-now">Buy Now</button> 
-                    buy-now' to={`/order/${_id}`}>Buy Now</Link>*/}
+                    <button className="btn btn-secondary uppercase text-white font-bold buy-now" onClick={() => navigateToProductDetail(_id)} >Buy Now</button>
 
-                    <Link disabled={available.length < 1} className='btn btn-secondary uppercase text-white font-bold buy-now' to={`/order/${_id}`}>Buy Now</Link>
+
+                    {/* <Link disabled={available.length < 1} className='btn btn-secondary uppercase text-white font-bold buy-now' to="/"
+                    >Buy Now</Link> */}
+
+                    {/* onClick={() => navigateToProductDetail(_id)} */}
                 </div>
             </div>
         </div>
