@@ -5,7 +5,7 @@ import auth from '../../firebase.init';
 // import { Link } from 'react-router-dom';
 import './service.css';
 
-const Service = ({ service }) => {
+const Service = ({ service, setOrder }) => {
     const { _id, name, price, description, available, order, img, supplier } = service;
 
 
@@ -43,9 +43,9 @@ const Service = ({ service }) => {
                 <div className="card-actions justify-end">
                     <button className="btn btn-secondary uppercase text-white font-bold buy-now" onClick={() => navigateToProductDetail(_id)} >Buy Now</button>
                     {
-                        user && <>
-                            <Link className='btn btn-primary mx-2' to={`/update/${_id}`}>Update</Link>
-                        </>
+                        // user && <>
+                        //     <Link className='btn btn-primary mx-2' to={`/update/${_id}`}>Update</Link>
+                        // </>
                     }
 
 

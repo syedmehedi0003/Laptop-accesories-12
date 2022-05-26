@@ -4,6 +4,7 @@ import Service from './Service';
 
 const Services = () => {
     const [services, setServices] = useServices();
+    const [order, setOrder] = useState(null);
 
     useEffect(() => {
         fetch('http://localhost:5000/product')
@@ -24,6 +25,7 @@ const Services = () => {
                     services.map(service => <Service
                         key={service._id}
                         service={service}
+                        setOrder={setOrder}
                     ></Service>)
                 }
 
