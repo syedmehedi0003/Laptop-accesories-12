@@ -1,5 +1,7 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { Link, useNavigate } from 'react-router-dom';
+import auth from '../../firebase.init';
 // import { Link } from 'react-router-dom';
 import './service.css';
 
@@ -11,6 +13,9 @@ const Service = ({ service }) => {
     const navigateToProductDetail = id => {
         navigate(`/product/${id}`);
     }
+
+    const [user] = useAuthState(auth);
+
     return (
 
         <div className="card card-compact w-96 bg-base-100 shadow-xl border justify-items-center">
@@ -37,6 +42,11 @@ const Service = ({ service }) => {
 
                 <div className="card-actions justify-end">
                     <button className="btn btn-secondary uppercase text-white font-bold buy-now" onClick={() => navigateToProductDetail(_id)} >Buy Now</button>
+                    {
+                        user && <>
+                            <Link className='btn btn-primary mx-2' to={`/update/${_id}`}>Update</Link>
+                        </>
+                    }
 
 
                     {/* <Link disabled={available.length < 1} className='btn btn-secondary uppercase text-white font-bold buy-now' to="/"

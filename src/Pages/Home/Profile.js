@@ -2,13 +2,13 @@ import React from 'react';
 import { useForm } from "react-hook-form";
 
 
-const AddProduct = () => {
+const Profile = () => {
     const { register, handleSubmit, reset } = useForm();
 
     const onSubmit = data => {
         console.log(data);
 
-        const url = `http://localhost:5000/product`;
+        const url = `http://localhost:5000/profile`;
         fetch(url, {
             method: 'POST',
             headers: {
@@ -30,25 +30,25 @@ const AddProduct = () => {
 
             <div class="card w-96 bg-base-100 shadow-xl border ">
                 <div class="card-body text-center">
-                    <h2 class="text-2xl font-bold ">Add Product</h2><hr />
+                    <h2 class="text-2xl font-bold ">User Profile</h2><hr />
 
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <label class="label">
-                            <span class="label-text-alt">Product Name</span>
+                            <span class="label-text-alt">Name</span>
                         </label>
-                        <input type="text" placeholder="Product Name" {...register("name")} class="input input-bordered w-full max-w-xs mb-2" />
+                        <input type="text" placeholder="Name" {...register("name")} class="input input-bordered w-full max-w-xs mb-2" />
 
 
                         <label class="label">
                             <span class="label-text-alt">Price</span>
                         </label>
-                        <input type="text" placeholder="Price" {...register("price")} class="input input-bordered w-full max-w-xs mb-2" />
+                        <input type="text" placeholder="Price" {...register("email")} class="input input-bordered w-full max-w-xs mb-2" />
 
                         <label class="label">
                             <span class="label-text-alt">Description</span>
                         </label>
                         <textarea type="text" placeholder="Description"
-                            {...register("description")} class="input input-bordered w-full max-w-xs mb-2" />
+                            {...register("address")} class="input input-bordered w-full max-w-xs mb-2" />
 
 
                         <label class="label">
@@ -81,7 +81,7 @@ const AddProduct = () => {
     );
 };
 
-export default AddProduct;
+export default Profile;
 
 
 

@@ -12,6 +12,7 @@ import Order from './Pages/Home/Order';
 import ServiceDetail from './Pages/Home/ServiceDetail';
 import AddProduct from './Pages/Home/AddProduct';
 import ManageProduct from './Pages/Home/ManageProduct';
+import UpdateProduct from './Pages/Home/UpdateProduct';
 
 
 
@@ -41,6 +42,10 @@ function App() {
 
           <Route path="manage" element={
             <ManageProduct></ManageProduct>
+          } />
+
+          <Route path="update" element={
+            <UpdateProduct></UpdateProduct>
           } />
 
           <Route path="about" element={<RequireAuth> <About></About></RequireAuth>} />
