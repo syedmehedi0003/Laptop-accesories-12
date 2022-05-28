@@ -10,7 +10,7 @@ const Review = () => {
     useEffect(() => {
         if (user) {
             // fetch(`https://secure-journey-62088.herokuapp.com/review?email=${user.email}`)
-            fetch(`https://secure-journey-62088.herokuapp.com/review?email=${user.email}`)
+            fetch(`https://secure-journey-62088.herokuapp.com/review`)
 
                 .then(res => res.json())
                 .then(data => setReview(data));
