@@ -5,13 +5,14 @@ import auth from '../../firebase.init';
 // import { Link } from 'react-router-dom';
 import './service.css';
 
-const Service = ({ service, setOrder }) => {
+const Service = ({ service }) => {
     const { _id, name, price, description, available, order, img, supplier } = service;
-
+    // _id,
 
     const navigate = useNavigate();
     const navigateToProductDetail = id => {
         navigate(`/product/${id}`);
+
     }
 
     const [user] = useAuthState(auth);
@@ -41,18 +42,20 @@ const Service = ({ service, setOrder }) => {
                 <h3> <span className='font-bold'>Brand:</span> {supplier}</h3>
 
                 <div className="card-actions justify-end">
-                    <button className="btn btn-secondary uppercase text-white font-bold buy-now" onClick={() => navigateToProductDetail(_id)} >Buy Now</button>
-                    {
-                        // user && <>
-                        //     <Link className='btn btn-primary mx-2' to={`/update/${_id}`}>Update</Link>
-                        // </>
-                    }
+                    <button onClick={() => navigateToProductDetail(_id)} disabled={available.length < 1} className='btn btn-primary buy-now'>Buy Now</button>
 
 
-                    {/* <Link disabled={available.length < 1} className='btn btn-secondary uppercase text-white font-bold buy-now' to="/"
+
+
+
+                    {/* <Link disabled={available.length < 1} className='btn btn-secondary uppercase text-white font-bold buy-now'
+                        to="" onClick={() => navigateToProductDetail(_id)}
                     >Buy Now</Link> */}
 
-                    {/* onClick={() => navigateToProductDetail(_id)} */}
+                    {/* <button className='btn btn-primary'
+                        onClick={() => setOrder(service)}
+                    >Buy Now</button> */}
+
                 </div>
             </div>
         </div>
@@ -60,3 +63,6 @@ const Service = ({ service, setOrder }) => {
 };
 
 export default Service;
+
+
+

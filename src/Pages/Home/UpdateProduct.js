@@ -24,15 +24,17 @@ const UpdateProduct = () => {
         event.preventDefault();
 
         const available = event.target.available.value;
-
-        // const updated = { quantity }
-
-        const newQuantity = parseInt(available) + parseInt(item.available);
-        console.log(newQuantity);
-        const updateItem = { newQuantity };
         if (!available) {
             alert('Quantity added');
         }
+        // const updated = { quantity }
+
+        const newQuantity = parseInt(available) + parseInt(item.available);
+
+        console.log(newQuantity);
+
+        const updateItem = { newQuantity };
+
 
         setItem({ ...item, available: item.available = parseInt(item.available) + parseInt(available) });
 
@@ -40,7 +42,7 @@ const UpdateProduct = () => {
 
         const url = `http://localhost:5000/product/${id}`;
         fetch(url, {
-            method: 'PUT',
+            method: 'PATCH',
             headers: {
                 'content-type': 'application/json',
             },
@@ -60,18 +62,23 @@ const UpdateProduct = () => {
 
 
     return (
-        <div className='w-50 mx-auto'>
-
-            <h2>Item Name: {item.name}</h2>
-            <h4>Quantity: {item.available}</h4>
-
-            <form className='d-flex flex-column' onSubmit={handleUpdate}>
-
-                <input type="text" className='mb-2 input input-bordered w-full max-w-xs' placeholder='Quantity' name="available" />
-                <input className='mb-2 btn btn-primary' type="submit" value="Update Item" />
-            </form>
+        <div className='flex justify-center items-center'>
 
 
+
+            <div class="card w-96 bg-base-100 shadow-xl border">
+                <div class="card-body">
+                    <h2>Id: {item._id}</h2>
+                    <h2>Item Name: {item.name}</h2>
+                    <h4>Quantity: {item.available}</h4>
+
+                    <form className='d-flex flex-column' onSubmit={handleUpdate}>
+
+                        <input type="text" className='mb-2 input input-bordered w-full max-w-xs' placeholder='Quantity' name="available" />
+                        <input className='mb-2 btn btn-primary' type="submit" value="Update Item" />
+                    </form>
+                </div>
+            </div>
         </div>
     );
 };

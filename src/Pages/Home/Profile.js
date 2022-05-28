@@ -1,25 +1,66 @@
 import React from 'react';
-import { useForm } from "react-hook-form";
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
+import { useParams } from 'react-router-dom';
 
 
 const Profile = () => {
-    const { register, handleSubmit, reset } = useForm();
 
-    const onSubmit = data => {
-        console.log(data);
 
-        const url = `http://localhost:5000/profile`;
+    const [user] = useAuthState(auth);
+
+    if (user) {
+        console.log(user);
+    }
+
+
+
+    // const handleUpdate = event => {
+    //     event.preventDefault();
+
+    //     const available = event.target.available.value;
+
+    // };
+
+    // const handleUpdate = event => {
+    //     event.preventDefault();
+
+
+    const handleUpdate = event => {
+
+        event.preventDefault();
+
+        // const available = event.target.available.value;
+
+        // const handleUpdate = data => {
+        //     console.log(data);
+
+        const userData = {
+
+            userName: user.displayName,
+            email: user.email,
+            education: event.target.education.value,
+            address: event.target.address.value,
+            linkedin: event.target.linkedin.value,
+
+        }
+
+        const url = `http://localhost:5000/user/profile`;
+        console.log(url);
         fetch(url, {
-            method: 'POST',
+            method: 'PUT',
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(data)
+            body: JSON.stringify(userData)
+
         })
             .then(res => res.json())
-            .then(result => {
-                console.log(result);
-                reset();
+            .then(result2 => {
+                console.log(result2);
+                alert('Update Successfully');
+                event.target.reset();
+
             })
 
     };
@@ -28,56 +69,32 @@ const Profile = () => {
 
         <div className='flex justify-center items-center'>
 
-            <div class="card w-96 bg-base-100 shadow-xl border ">
-                <div class="card-body text-center">
-                    <h2 class="text-2xl font-bold ">User Profile</h2><hr />
-
-                    <form onSubmit={handleSubmit(onSubmit)}>
-                        <label class="label">
-                            <span class="label-text-alt">Name</span>
-                        </label>
-                        <input type="text" placeholder="Name" {...register("name")} class="input input-bordered w-full max-w-xs mb-2" />
 
 
-                        <label class="label">
-                            <span class="label-text-alt">Price</span>
-                        </label>
-                        <input type="text" placeholder="Price" {...register("email")} class="input input-bordered w-full max-w-xs mb-2" />
 
-                        <label class="label">
-                            <span class="label-text-alt">Description</span>
-                        </label>
-                        <textarea type="text" placeholder="Description"
-                            {...register("address")} class="input input-bordered w-full max-w-xs mb-2" />
+            <div class="card w-96 bg-base-100 shadow-xl border">
+                <div class="card-body">
+                    <div className='w-50 mx-auto'>
+                        <p className='text-2xl fond-bold mb-4'>Update User Profile</p>
+                        <form className='d-flex flex-column' onSubmit={handleUpdate}>
 
+                            <input type="text" disabled className='mb-2 input input-bordered w-full max-w-xs' placeholder='name' name="name" value={user?.displayName} />
 
-                        <label class="label">
-                            <span class="label-text-alt">Quantity</span>
-                        </label>
-                        <input type="text" placeholder="Quantity"
-                            {...register("available")} class="input input-bordered w-full max-w-xs mb-2" />
+                            <input type="text" disabled className='mb-2 input input-bordered w-full max-w-xs' placeholder='email' name="email" value={user?.email} />
 
+                            <input type="text" className='mb-2 input input-bordered w-full max-w-xs' placeholder='Education' name="education" />
 
-                        <label class="label">
-                            <span class="label-text-alt">Brand</span>
-                        </label>
-                        <input type="text" placeholder="Brand" {...register("supplier")} class="input input-bordered w-full max-w-xs mb-2" />
+                            <textarea type="text" className='mb-2 input input-bordered w-full max-w-xs' placeholder='Address' name="address" />
 
-                        <label class="label">
-                            <span class="label-text-alt">Photo URL</span>
-                        </label>
-                        <input type="text" placeholder="Photo URL" {...register("img")} class="input input-bordered w-full max-w-xs mb-2" />
+                            <input type="text" className='mb-2 input input-bordered w-full max-w-xs' placeholder='linkedin' name="linkedin" />
 
+                            <input className='mb-2 btn btn-primary' type="submit" value="Update User" />
+                        </form>
 
-                        {/* <button class="btn btn-primary">Buy Now</button> */}
-                        <input class="btn btn-primary" type="submit" value="Add Product" />
-
-                    </form>
-
+                    </div>
                 </div>
             </div>
-
-        </div>
+        </div >
     );
 };
 
@@ -85,12 +102,5 @@ export default Profile;
 
 
 
-// <form onSubmit={handleSubmit(onSubmit)}>
-//     <input {...register("firstName")} />
-//     <select {...register("gender")}>
-//         <option value="female">female</option>
-//         <option value="male">male</option>
-//         <option value="other">other</option>
-//     </select>
-//     <input type="submit" />
-// </form>
+
+

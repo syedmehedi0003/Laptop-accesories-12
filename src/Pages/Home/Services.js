@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import useServices from '../hooks/useServices';
+import Order from './Order';
 import Service from './Service';
 
 const Services = () => {
@@ -30,7 +31,7 @@ const Services = () => {
                 }
 
             </div>
-
+            {order && <Order order={order}></Order>}
         </div>
     );
 };

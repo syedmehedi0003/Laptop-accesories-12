@@ -1,24 +1,20 @@
 
-// import React from 'react';
-// import React, { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import React from 'react';
 
 
-const Order = () => {
-    const { serviceId } = useParams();
 
+const Order = ({ service }) => {
 
+    const { name, price } = service;
     return (
-        <div className='w-50 mx-auto text-center'>
-            {/* <h4 className='mb-2'>Add Product</h4> */}
-            <h2>Welcome to detail:{serviceId}</h2>
-
-            <div className='text-center'>
-                <Link to="/checkout">
-                    <button className='btn btn-primary'>Proceed CheckOut</button>
-                </Link>
+        <div class="card w-96 bg-base-100 shadow-xl">
+            <div class="card-body">
+                <h2 class="card-title">{name}</h2>
+                <p>{price}</p>
+                <div class="card-actions justify-end">
+                    <button class="btn btn-primary">Buy Now</button>
+                </div>
             </div>
-
         </div>
     );
 };

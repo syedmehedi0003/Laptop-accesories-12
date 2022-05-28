@@ -1,5 +1,6 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
+import { toast } from 'react-toastify';
 
 
 const AddProduct = () => {
@@ -85,12 +86,3 @@ export default AddProduct;
 
 
 
-// <form onSubmit={handleSubmit(onSubmit)}>
-//     <input {...register("firstName")} />
-//     <select {...register("gender")}>
-//         <option value="female">female</option>
-//         <option value="male">male</option>
-//         <option value="other">other</option>
-//     </select>
-//     <input type="submit" />
-// </form>

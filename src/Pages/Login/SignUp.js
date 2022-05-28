@@ -47,7 +47,7 @@ const SignUp = () => {
     return (
         <div className='flex h-screen justify-center items-center'>
 
-            <div className="card w-96 bg-base-100 shadow-xl">
+            <div className="card w-96 bg-base-100 shadow-xl border">
                 <div className="card-body">
                     <h2 className="text-2xl font-bold text-center">Sign Up</h2>
 
@@ -143,7 +143,7 @@ const SignUp = () => {
                             </label>
                         </div>
 
-                        {SingInError}
+                        <span className='text-red-500'>{SingInError} </span>
                         <input type="submit" className="btn btn-primary text-white w-full max-w-xs" value="Sign Up" />
 
                     </form>
