@@ -42,7 +42,10 @@ const Service = ({ service }) => {
                 <h3> <span className='font-bold'>Brand:</span> {supplier}</h3>
 
                 <div className="card-actions justify-end">
+
+
                     <button onClick={() => navigateToProductDetail(_id)} disabled={available.length < 1} className='btn btn-primary buy-now'>Buy Now</button>
+
 
 
 

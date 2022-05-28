@@ -2,7 +2,7 @@ import React from 'react';
 import { toast } from 'react-toastify';
 
 const UserRow = ({ user }) => {
-    const { email, name, role } = user;
+    const { email, role } = user;
 
 
     const makeAdmin = () => {
@@ -23,6 +23,7 @@ const UserRow = ({ user }) => {
                 console.log(data);
 
                 if (data.modifiedCount > 0) {
+
                     toast.success('Successfully made an admin');
                 }
 
@@ -34,7 +35,7 @@ const UserRow = ({ user }) => {
     return (
         <tr>
 
-            <td>{name}</td>
+            {/* <td>{user.name}</td> */}
             <td>{email}</td>
             {/* <td>{role !== 'admin' && <button onClick={makeAdmin} class="btn btn-xs">Make Admin</button>}</td> */}
             {

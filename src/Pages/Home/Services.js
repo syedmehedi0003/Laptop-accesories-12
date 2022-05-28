@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import useServices from '../hooks/useServices';
-import Order from './Order';
+import AllOrder from '../Dashboard/AllOrder';
 import Service from './Service';
 
 const Services = () => {
@@ -16,7 +16,7 @@ const Services = () => {
     return (
 
         <div>
-            <h1 className="text-2xl font-bold text-center mb-8 text-secondary"> Laptop Accessories</h1>
+            <h1 className="text-4xl font-bold text-center mb-8 text-primary"> Laptop Accessories</h1>
 
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-10 justify-items-center mb-10'>
 
@@ -31,7 +31,7 @@ const Services = () => {
                 }
 
             </div>
-            {order && <Order order={order}></Order>}
+
         </div>
     );
 };

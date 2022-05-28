@@ -3,29 +3,29 @@ import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
 import auth from '../../firebase.init';
+import useAdmin from '../hooks/useAdmin';
 
 const Navbar = () => {
 
-    const [user, loading, error] = useAuthState(auth);
+    const [user] = useAuthState(auth);
+    const [admin] = useAdmin(user);
+
 
     const logout = () => {
         signOut(auth);
+        localStorage.removeItem('accessToken');
     };
 
     const menuItems = <>
         <li><Link to="/">Home</Link></li>
         <li><Link to="/accessories">Accessories</Link></li>
-        <li><Link to="/order">Order Now</Link></li>
         <li><Link to="/review">Reviews</Link></li>
-        <li><Link to="/contact">Contact Us</Link></li>
-        <li><Link to="/about">About</Link></li>
-        <li><Link to="/manage">Manage</Link></li>
-        <li><Link to="/add">Add Product</Link></li>
-        <li><Link to="/update">update</Link></li>
-        <li><Link to="/userprofile">UProfile</Link></li>
+        <li><Link to="/blog">Blog</Link></li>
+        <li><Link to="/portfolio">Portfolio</Link></li>
+
 
         {
-            user && <li><Link to="/dashboard">DashBoard</Link></li>
+            (admin || user) && <li><Link to="/dashboard">DashBoard</Link></li>
         }
 
     </>
@@ -40,7 +40,8 @@ const Navbar = () => {
                         {menuItems}
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-2xl text-orange-400">BD SHOP</a>
+                <Link className="btn btn-ghost normal-case text-2xl text-orange-400" to="/">BD SHOP</Link>
+                {/* <a ></a> */}
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
@@ -49,9 +50,7 @@ const Navbar = () => {
             </div>
             <div className="navbar-end pr-0">
 
-                {/* <label tabIndex="0" className="btn btn-ghost lg:hidden">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-                </label> */}
+
 
                 <label for="dashboard-sidebar" class="btn btn-primary btn-xs drawer-button lg:hidden">Open drawer</label>
                 <ul>

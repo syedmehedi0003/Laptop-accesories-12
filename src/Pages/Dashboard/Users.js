@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-// import { useQuery } from 'react-query';
+
 import auth from '../../firebase.init';
 import UserRow from './UserRow';
-// import Loading from '../Shared/Loading';
+
 
 const Users = () => {
 
-    // const { data: user, isLoading } = useQuery('users', () => fetch('http://localhost:5000/user')
-    //     .then(res => res.json()));
+
 
     const [user1, setUser1] = useState([]);
 
@@ -16,7 +15,7 @@ const Users = () => {
 
     useEffect(() => {
         if (user) {
-            // const url = `http://localhost:5000/user?email=${user.email}`;
+
             const url = `http://localhost:5000/user`;
             fetch(url, {
                 method: 'GET',
@@ -41,7 +40,7 @@ const Users = () => {
                     <thead>
                         <tr>
 
-                            <th>Name</th>
+                            {/* <th>Name</th> */}
                             <th>Email</th>
                             <th>Job</th>
                             <th>Delete</th>

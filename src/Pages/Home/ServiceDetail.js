@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { appendErrors, useForm } from 'react-hook-form';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import auth from '../../firebase.init';
 
 const ServiceDetail = () => {
@@ -68,16 +68,16 @@ const ServiceDetail = () => {
     return (
         <div>
 
-            <h2 className='text-2xl text-center'>Id: {serviceId}</h2>
+
             <h3 className='text-2xl text-center'>{service.name}</h3>
-            <h3 className='text-xl text-center'>Price Per One: {service.price}</h3>
+
 
 
             <div className='flex justify-center items-center'>
 
                 <div class="card w-96 bg-base-100 shadow-xl border ">
                     <div class="card-body text-center">
-                        <h2 class="text-2xl font-bold ">Add Product</h2><hr />
+                        <h2 class="text-2xl font-bold ">Buy This Product</h2><hr />
 
                         <form onSubmit={handleSubmit(onSubmit)}>
 
@@ -161,9 +161,12 @@ const ServiceDetail = () => {
 
 
                             {/* <button class="btn btn-primary">Buy Now</button> */}
-                            <input class="btn btn-primary" disabled={errors?.quantity}
+
+                            {user && <input class="btn btn-primary" disabled={errors?.quantity}
                                 error
-                                type="submit" value="Add Order" />
+                                type="submit" value="Add Order" />}
+
+                            {!user && <p className='text-red-500 font-bold'><Link to="/login" className=" font-bold btn btn-ghost ">First Login Here</Link></p>}
 
                         </form>
 

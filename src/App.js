@@ -8,21 +8,24 @@ import Footer from './Pages/Shared/Footer';
 import SignUp from './Pages/Login/SignUp';
 import RequireAuth from './Pages/Login/RequireAuth';
 import Services from './Pages/Home/Services';
-import Order from './Pages/Home/Order';
+import AllOrder from './Pages/Dashboard/AllOrder';
 import ServiceDetail from './Pages/Home/ServiceDetail';
 import AddProduct from './Pages/Home/AddProduct';
 import ManageProduct from './Pages/Home/ManageProduct';
 import UpdateProduct from './Pages/Home/UpdateProduct';
-import Perchase from './Pages/Home/Perchase';
+import Perchase from './Pages/Home/Portfolio';
 
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import DashBoard from './Pages/Dashboard/DashBoard';
 import MyProfile from './Pages/Dashboard/MyProfile';
-import Review from './Pages/Dashboard/Review';
+import Review from './Pages/Home/Review';
 import Profile from './Pages/Home/Profile';
 import MyOrder from './Pages/Dashboard/MyOrder';
 import Users from './Pages/Dashboard/Users';
+import AddReview from './Pages/Home/AddReview';
+import Blog from './Pages/Home/Blog';
+import Portfolio from './Pages/Home/Portfolio';
 
 
 
@@ -40,42 +43,35 @@ function App() {
           <Route path="/product/:serviceId" element={<ServiceDetail>
           </ServiceDetail>}></Route>
 
-          <Route path="order" element={
-            <RequireAuth>
-              <About></About>
-            </RequireAuth>
-          } />
-
-          <Route path="add" element={
-            <AddProduct></AddProduct>
-          } />
-
-          <Route path="manage" element={
-            <ManageProduct></ManageProduct>
-          } />
-
           <Route path="update/:id" element={
             <UpdateProduct></UpdateProduct>
           } />
 
-          <Route path="perchase" element={
-            <Perchase></Perchase>
+          <Route path="portfolio" element={
+            <Portfolio></Portfolio>
           } />
 
-          <Route path="userprofile" element={
-            <Profile></Profile>
+          <Route path="blog" element={
+            <Blog></Blog>
           } />
+
+          <Route path="review" element={<Review></Review>}></Route>
 
           <Route path="dashboard" element={
             <RequireAuth>
-              <DashBoard></DashBoard>
+              <DashBoard>
+              </DashBoard>
             </RequireAuth>
           } >
             <Route index element={<MyProfile></MyProfile>}></Route>
-            <Route path="review" element={<Review></Review>}></Route>
-            <Route path="order" element={<Order></Order>}></Route>
+            <Route path="addreview" element={<AddReview></AddReview>}></Route>
+            <Route path="allOrder" element={<AllOrder></AllOrder>}></Route>
             <Route path="uorder" element={<MyOrder></MyOrder>}></Route>
             <Route path="users" element={<Users></Users>}></Route>
+            <Route path="manage" element={<ManageProduct></ManageProduct>}></Route>
+            <Route path="add" element={<AddProduct></AddProduct>} ></Route>
+            <Route path="userprofile" element={<Profile></Profile>} />
+
 
           </Route>
 

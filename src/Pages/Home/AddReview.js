@@ -1,11 +1,8 @@
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
-import { useParams } from 'react-router-dom';
 
-
-const Profile = () => {
-
+const AddReview = () => {
 
     const [user] = useAuthState(auth);
 
@@ -16,7 +13,7 @@ const Profile = () => {
 
 
 
-    const handleUpdate = event => {
+    const handleReview = event => {
 
         event.preventDefault();
 
@@ -26,13 +23,12 @@ const Profile = () => {
 
             userName: user.displayName,
             email: user.email,
-            education: event.target.education.value,
-            address: event.target.address.value,
-            linkedin: event.target.linkedin.value,
+            ratting: event.target.ratting.value,
+            commect: event.target.commect.value,
 
         }
 
-        const url = `http://localhost:5000/user/profile`;
+        const url = `http://localhost:5000/user/review`;
         console.log(url);
         fetch(url, {
             method: 'PUT',
@@ -51,9 +47,7 @@ const Profile = () => {
             })
 
     };
-
     return (
-
         <div className='flex justify-center items-center'>
 
 
@@ -62,20 +56,20 @@ const Profile = () => {
             <div class="card w-96 bg-base-100 shadow-xl border">
                 <div class="card-body">
                     <div className='w-50 mx-auto'>
-                        <p className='text-2xl fond-bold mb-4'>Update User Profile</p>
-                        <form className='d-flex flex-column' onSubmit={handleUpdate}>
+                        <p className='text-2xl fond-bold mb-4'>User Review</p>
+                        <form className='d-flex flex-column' onSubmit={handleReview}>
 
                             <input type="text" disabled className='mb-2 input input-bordered w-full max-w-xs' placeholder='name' name="name" value={user?.displayName} />
 
                             <input type="text" disabled className='mb-2 input input-bordered w-full max-w-xs' placeholder='email' name="email" value={user?.email} />
 
-                            <input type="text" className='mb-2 input input-bordered w-full max-w-xs' placeholder='Education' name="education" />
+                            <input type="text" className='mb-2 input input-bordered w-full max-w-xs' placeholder='Ratting(Out of Five)' name="ratting" />
 
-                            <textarea type="text" className='mb-2 input input-bordered w-full max-w-xs' placeholder='Address' name="address" />
+                            <input type="text" className='mb-2 input input-bordered w-full max-w-xs' placeholder='Description' name="commect" />
 
-                            <input type="text" className='mb-2 input input-bordered w-full max-w-xs' placeholder='linkedin' name="linkedin" />
 
-                            <input className='mb-2 btn btn-primary' type="submit" value="Update User" />
+
+                            <input className='mb-2 btn btn-primary' type="submit" value="User Review" />
                         </form>
 
                     </div>
@@ -85,9 +79,4 @@ const Profile = () => {
     );
 };
 
-export default Profile;
-
-
-
-
-
+export default AddReview;
