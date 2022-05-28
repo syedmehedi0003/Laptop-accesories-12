@@ -28,7 +28,7 @@ const AddReview = () => {
 
         }
 
-        const url = `http://localhost:5000/user/review`;
+        const url = `https://secure-journey-62088.herokuapp.com/user/review`;
         console.log(url);
         fetch(url, {
             method: 'PUT',

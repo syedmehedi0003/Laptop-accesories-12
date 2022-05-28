@@ -12,7 +12,7 @@ const ManageProduct = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are u sure?');
         if (proceed) {
-            const url = `http://localhost:5000/product/${id}`;
+            const url = `https://secure-journey-62088.herokuapp.com/product/${id}`;
 
             fetch(url, {
                 method: 'delete'

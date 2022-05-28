@@ -32,7 +32,7 @@ const Profile = () => {
 
         }
 
-        const url = `http://localhost:5000/user/profile`;
+        const url = `https://secure-journey-62088.herokuapp.com/user/profile`;
         console.log(url);
         fetch(url, {
             method: 'PUT',

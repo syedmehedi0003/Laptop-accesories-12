@@ -9,8 +9,8 @@ const Review = () => {
 
     useEffect(() => {
         if (user) {
-            // fetch(`http://localhost:5000/review?email=${user.email}`)
-            fetch(`http://localhost:5000/review?email=${user.email}`)
+            // fetch(`https://secure-journey-62088.herokuapp.com/review?email=${user.email}`)
+            fetch(`https://secure-journey-62088.herokuapp.com/review?email=${user.email}`)
 
                 .then(res => res.json())
                 .then(data => setReview(data));

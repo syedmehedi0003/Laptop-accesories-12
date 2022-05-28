@@ -10,7 +10,7 @@ const MyOrder = () => {
 
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/order?email=${user.email}`,
+            fetch(`https://secure-journey-62088.herokuapp.com/order?email=${user.email}`,
                 {
 
                     method: 'GET',

@@ -13,7 +13,7 @@ const AllOrder = ({ service }) => {
     useEffect(() => {
         if (user) {
 
-            const url = `http://localhost:5000/user/order`;
+            const url = `https://secure-journey-62088.herokuapp.com/user/order`;
             fetch(url, {
                 method: 'GET',
                 headers: {
