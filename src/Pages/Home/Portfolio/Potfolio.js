@@ -1,5 +1,4 @@
 import React from 'react';
-import './Portfolio.css';
 import Myimg from '../../../images/portfolio/mypic4.jpg';
 import Marvel from '../../../images/portfolio/marbel.PNG';
 import strict from '../../../images/portfolio/strict.PNG';

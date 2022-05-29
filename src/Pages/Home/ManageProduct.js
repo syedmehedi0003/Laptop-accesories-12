@@ -31,9 +31,7 @@ const ManageProduct = () => {
 
             <div class="card card-body  bg-base-100 shadow-xl text-center border">
                 <p className='text-2xl font-bold '>Manage Product</p> <hr />
-                {/* <figure class="px-10 pt-10">
-                    <img src="" alt="" />
-                </figure> */}
+
                 <div class="items-center text-center">{
                     services.map(service => <div key={service._id}>
                         <h2 class="card-title justify-center">{service.name}</h2>

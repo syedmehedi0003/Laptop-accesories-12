@@ -31,13 +31,13 @@ const UserRow = ({ user }) => {
             })
 
     }
-    // let index;
+
     return (
         <tr>
 
-            {/* <td>{user.name}</td> */}
+
             <td>{email}</td>
-            {/* <td>{role !== 'admin' && <button onClick={makeAdmin} class="btn btn-xs">Make Admin</button>}</td> */}
+
             {
                 role !== 'admin' ?
                     <td><button onClick={makeAdmin} class="btn btn-xs">Make Admin</button></td>

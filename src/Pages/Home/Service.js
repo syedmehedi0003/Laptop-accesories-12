@@ -2,12 +2,10 @@ import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
-// import { Link } from 'react-router-dom';
-import './service.css';
+
 
 const Service = ({ service }) => {
     const { _id, name, price, description, available, order, img, supplier } = service;
-    // _id,
 
     const navigate = useNavigate();
     const navigateToProductDetail = id => {
@@ -55,9 +53,7 @@ const Service = ({ service }) => {
                         to="" onClick={() => navigateToProductDetail(_id)}
                     >Buy Now</Link> */}
 
-                    {/* <button className='btn btn-primary'
-                        onClick={() => setOrder(service)}
-                    >Buy Now</button> */}
+
 
                 </div>
             </div>

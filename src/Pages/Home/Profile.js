@@ -14,8 +14,6 @@ const Profile = () => {
     }
 
 
-
-
     const handleUpdate = event => {
 
         event.preventDefault();

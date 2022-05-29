@@ -60,31 +60,8 @@ const MyOrder = () => {
     // }
 
 
-    // const handleDelete = (id) => {
 
 
-
-    //     fetch(`https://morning-garden-88599.herokuapp.com/order/${id}`, {
-    //         method: 'DELETE',
-    //         headers: {
-    //             "content-type": "application/json",
-    //             authorization: `Bearer ${localStorage.getItem('token')}`
-    //         }
-
-    //     })
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             console.log(data);
-    //             if (data.deletedCount) {
-
-    //                 alert('Order cancelled successfully')
-    //             }
-    //             else {
-    //                 alert(`Can't Cancel the Order`)
-    //             }
-    //         })
-
-    // }
 
     return (
         <div>

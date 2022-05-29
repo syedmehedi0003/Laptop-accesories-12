@@ -22,8 +22,6 @@ const ServiceDetail = () => {
 
 
 
-
-    // const { register, handleSubmit, reset } = useForm();
     const { register, formState: { errors }, handleSubmit, reset } = useForm();
 
     const onSubmit = data => {
@@ -157,10 +155,6 @@ const ServiceDetail = () => {
 
                                 class="input input-bordered w-full max-w-xs mb-2" />
 
-                            {/* <input {...register("firstName", { required: true, maxLength: 20 })} /> */}
-
-
-                            {/* <button class="btn btn-primary">Buy Now</button> */}
 
                             {user && <input class="btn btn-primary" disabled={errors?.quantity}
                                 error

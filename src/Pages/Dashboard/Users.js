@@ -36,11 +36,11 @@ const Users = () => {
 
             <div class="overflow-x-auto">
                 <table class="table w-full">
-                    {/* <!-- head --> */}
+
                     <thead>
                         <tr>
 
-                            {/* <th>Name</th> */}
+
                             <th>Email</th>
                             <th>Job</th>
                             <th>Delete</th>
@@ -48,7 +48,6 @@ const Users = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {/* <!-- row 1 --> */}
 
                         {
                             user1.map((user) => <UserRow

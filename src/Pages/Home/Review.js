@@ -9,11 +9,14 @@ const Review = () => {
 
     useEffect(() => {
         if (user) {
-            // fetch(`https://morning-garden-88599.herokuapp.com/review?email=${user.email}`)
+
             fetch(`https://morning-garden-88599.herokuapp.com/user/review`)
 
                 .then(res => res.json())
-                .then(data => setReviews(data));
+                .then(data => {
+                    setReviews(data)
+                    console.log(data);
+                });
         }
     }, [user])
 

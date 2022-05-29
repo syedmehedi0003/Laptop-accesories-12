@@ -1,4 +1,4 @@
-import './App.css';
+
 import { Routes, Route, Router } from "react-router-dom";
 import Navbar from './Pages/Shared/Navbar';
 import Home from './Pages/Home/Home';
@@ -24,7 +24,7 @@ import MyOrder from './Pages/Dashboard/MyOrder';
 import Users from './Pages/Dashboard/Users';
 import AddReview from './Pages/Home/AddReview';
 import Blog from './Pages/Home/Blog';
-// import Portfolio from './Pages/Home/Portfolio';
+
 import Portfolio from './Pages/Home/Portfolio/Potfolio';
 
 
@@ -47,9 +47,6 @@ function App() {
             <UpdateProduct></UpdateProduct>
           } />
 
-          {/* <Route path="portfolio" element={
-            <Portfolio></Portfolio>
-          } /> */}
 
           <Route path="portfolio2" element={
             <Portfolio></Portfolio>
