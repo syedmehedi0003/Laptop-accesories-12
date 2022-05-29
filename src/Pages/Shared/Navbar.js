@@ -52,7 +52,7 @@ const Navbar = () => {
 
 
 
-                <label for="dashboard-sidebar" class="btn btn-primary btn-xs drawer-button lg:hidden">Open DashBoard</label>
+                <label for="dashboard-sidebar" class="btn btn-primary btn-xs drawer-button lg:hidden">Open</label>
                 <ul>
                     <li>
                         {user ? <button onClick={logout} className="btn btn-ghost text-red-500 font-bold">Sign Out</button> :

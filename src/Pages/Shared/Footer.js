@@ -6,16 +6,7 @@ const Footer = () => {
 
 
         <footer
-            // style={
-            //     {
-            //         position: 'fixed',
-            //         left: '0',
-            //         bottom: '0',
-            //         width: '100%',
-            //         marginTop: '1000px',
 
-            //     }
-            // }
             className=" p-5 bg-base-200 mt-10">
             <div className="footer p-5 flex flex-col md:flex-row justify-around items-center">
                 <div>
@@ -44,7 +35,7 @@ const Footer = () => {
 
             <div className="divider"></div>
 
-            <div className='text-center my-5'>
+            <div className='text-center my-5 footer-title text-sm'>
                 <p>Copyright © 2022 - All right reserved</p>
             </div>
         </footer>
