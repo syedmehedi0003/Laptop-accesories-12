@@ -12,7 +12,7 @@
 ## Assignment 12 Admin Pass (123456)
 
 
-#### NOte: Maje Maje MongoDb data load a problem kore, net slow or server problem er karone.
+#### Note: Maje Maje MongoDb data load a problem kore, net slow or server problem er karone.
 
 
 ### My Work Explanation  
