@@ -132,7 +132,7 @@ const Login = () => {
 
                     </form>
 
-                    <small> <p>New to Doctors Portal <Link className='text-primary font-bold' to="/signup">Create New Account</Link></p></small>
+                    <small> <p>New to Laptop Parts <Link className='text-primary font-bold' to="/signup">Create New Account</Link></p></small>
                     <div className="divider">OR</div>
 
                     <button className="btn btn-outline btn-primary"
