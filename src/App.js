@@ -26,6 +26,7 @@ import AddReview from './Pages/Home/AddReview';
 import Blog from './Pages/Home/Blog';
 
 import Portfolio from './Pages/Home/Portfolio/Potfolio';
+import NotFound from "./Pages/Home/NotFound";
 
 
 
@@ -55,6 +56,14 @@ function App() {
           <Route path="blog" element={
             <Blog></Blog>
           } />
+
+
+          <Route path="blog" element={
+            <Blog></Blog>
+          } />
+
+          <Route path="*" element={<NotFound></NotFound>}></Route>
+
 
           <Route path="review" element={<Review></Review>}></Route>
 

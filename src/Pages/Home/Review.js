@@ -24,7 +24,7 @@ const Review = () => {
         <div>
 
             <h1 className="text-4xl font-bold text-center mb-8 text-primary">
-                Customer Review</h1>
+                Customer Reviews</h1>
             <h2 className='text-center font-bold mb-3'>Total Review: {reviews.length}</h2>
 
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-10 justify-items-center mb-10'>
