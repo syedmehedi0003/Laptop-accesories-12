@@ -1,10 +1,10 @@
 import React from 'react';
+import Error from '../../images/notfound.jpg';
 
 const NotFound = () => {
     return (
-        <div className='text-center font-bold text-red-500'>
-            <p className='text-6xl'>404</p>
-            <p className='text-3xl'>OPPS!.. Page not Found</p>
+        <div className='flex justify-center items-center py-0 my-0'>
+            <img src={Error} alt="" />
         </div>
     );
 };
