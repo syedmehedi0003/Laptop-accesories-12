@@ -20,7 +20,7 @@ const Potfolio = () => {
                             I have completed my B.sc in CSE degree from the Department of Computer Science and Engineering of The Millennium University.
 
                             My keen interest in Computer Science and Engineering has enabled me to develop a good knowledge of Programming language and IT. </p>
-                        <p className='text-lg mb-2'>I good at Html, Css, Bootstrap, Tailwind, JavaScript, React, NodeJs and MongoBD.</p>
+                        <p className='text-lg mb-2'>I good at Html, Css, Bootstrap, Tailwind, JavaScript, React, NodeJs and MongoDB.</p>
                         <button className="btn btn-primary bg-gradient-to-r from-secondary to-primary uppercase text-white font-bold">Get Started</button>
                     </div>
                 </div>

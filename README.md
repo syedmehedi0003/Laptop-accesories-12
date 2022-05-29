@@ -2,16 +2,22 @@
 
 # Assignment 12
 
-## Assignment 12 Client link [Click Here](https://gym-service-5a99c.web.app/)
-## Assignment 12 server link [Click Here](https://morning-garden-88599.herokuapp.com/product)
-## Assignment 12 Admin Email And pass [Click Here] ('')
+## Assignment 12 Client Web link [Click Here](https://laptop-parts-202a1.web.app/)
+## Assignment 12 Client Code link [Click Here](https://github.com/programming-hero-web-course1/manufacturer-website-client-side-syedmehedi0003)
+
+## Assignment 12 server web link [Click Here](https://morning-garden-88599.herokuapp.com/product)
+## Assignment 12 server Code  link [Click Here](https://github.com/programming-hero-web-course1/manufacturer-website-server-side-syedmehedi0003)
+
+## Assignment 12 Admin Email (mehedihasanbahar@gmail.com)
+## Assignment 12 Admin Pass (123456)
 
 ### Work Explanation  
 - React routes
-- Bootstrap
+- Tailwind
 - React firebase hooks
 - Firebase 
 - node.js
+- Mongodb
 
 
 
