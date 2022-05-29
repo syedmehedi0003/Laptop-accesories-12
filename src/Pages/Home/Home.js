@@ -9,6 +9,7 @@ import img1 from '../../images/Business/img1.jpg';
 import img2 from '../../images/Business/img2.jpg';
 import img3 from '../../images/Business/img3.jpg';
 import Review from './Review';
+import ContactUs from './ContactUs';
 
 const Home = () => {
     return (
@@ -42,8 +43,9 @@ const Home = () => {
                 </div>
             </div>
 
-            <Review></Review>
 
+            <ContactUs></ContactUs>
+            <Review></Review>
 
         </div>
     );

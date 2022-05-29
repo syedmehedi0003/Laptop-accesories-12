@@ -27,6 +27,7 @@ import Blog from './Pages/Home/Blog';
 
 import Portfolio from './Pages/Home/Portfolio/Potfolio';
 import NotFound from "./Pages/Home/NotFound";
+import ContactUs from "./Pages/Home/ContactUs";
 
 
 
@@ -62,10 +63,17 @@ function App() {
             <Blog></Blog>
           } />
 
+
+          <Route path="review" element={<Review></Review>}></Route>
+
+          <Route path="location" element={<ContactUs></ContactUs>}></Route>
+
+
+
           <Route path="*" element={<NotFound></NotFound>}></Route>
 
 
-          <Route path="review" element={<Review></Review>}></Route>
+
 
           <Route path="dashboard" element={
             <RequireAuth>

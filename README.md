@@ -2,7 +2,7 @@
 
 # Assignment 12
 
-## Assignment 12 Client Web link [Click Here](https://laptop-parts-202a1.web.app/)
+## Assignment 12 Web  link [Click Here](https://laptop-parts-202a1.web.app/)
 ## Assignment 12 Client Code link [Click Here](https://github.com/programming-hero-web-course1/manufacturer-website-client-side-syedmehedi0003)
 
 ## Assignment 12 Server web link [Click Here](https://morning-garden-88599.herokuapp.com/product)
@@ -10,6 +10,10 @@
 
 ## Assignment 12 Admin Email (mehedihasanbahar@gmail.com)
 ## Assignment 12 Admin Pass (123456)
+
+
+#### NOte: Maje Maje MongoDb data load a problem kore, net slow or server problem er karone.
+
 
 ### My Work Explanation  
 - React routes
