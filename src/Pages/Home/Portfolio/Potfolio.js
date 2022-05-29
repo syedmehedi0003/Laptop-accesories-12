@@ -1,9 +1,10 @@
 import React from 'react';
 import Myimg from '../../../images/portfolio/mypic4.jpg';
+import Myimg2 from '../../../images/portfolio/pic7.jpg';
 import Marvel from '../../../images/portfolio/marbel.PNG';
 import strict from '../../../images/portfolio/strict.PNG';
 import tinyone from '../../../images/portfolio/tinyone.PNG';
-import { Link } from 'react-router-dom';
+
 
 
 const Potfolio = () => {
@@ -12,14 +13,14 @@ const Potfolio = () => {
 
             <div className="hero min-h-screen">
                 <div className="hero-content flex-col lg:flex-row-reverse">
-                    <img src={Myimg} className="lg:w-1/3 rounded-lg imgBorder sm:w-1/2" />
+                    <img src={Myimg2} className="lg:w-1/3 rounded-lg imgBorder sm:w-1/2" />
                     <div className='text-center lg:text-left'>
-                        <h1 className="text-5xl font-bold">   I am Syed Mahade Hasan</h1>
+                        <h1 className="text-5xl font-bold text-primary">Hi,   I am Syed Mahade Hasan</h1>
                         <p className="py-6">
                             I have completed my B.sc in CSE degree from the Department of Computer Science and Engineering of The Millennium University.
 
                             My keen interest in Computer Science and Engineering has enabled me to develop a good knowledge of Programming language and IT. </p>
-                        <p className='text-lg mb-2'>I know Html, Css, JavaScript, React, NodeJs, MongoBD</p>
+                        <p className='text-lg mb-2'>I good at Html, Css, Bootstrap, Tailwind, JavaScript, React, NodeJs and MongoBD.</p>
                         <button className="btn btn-primary bg-gradient-to-r from-secondary to-primary uppercase text-white font-bold">Get Started</button>
                     </div>
                 </div>
