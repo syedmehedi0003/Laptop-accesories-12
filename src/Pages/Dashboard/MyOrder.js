@@ -10,7 +10,7 @@ const MyOrder = () => {
 
     useEffect(() => {
         if (user) {
-            fetch(`https://secure-journey-62088.herokuapp.com/order?email=${user.email}`,
+            fetch(`https://morning-garden-88599.herokuapp.com/order?email=${user.email}`,
                 {
 
                     method: 'GET',
@@ -38,7 +38,53 @@ const MyOrder = () => {
 
 
         }
-    }, [user])
+    }, [user]);
+
+
+
+    // const handleDelete = id => {
+    //     const proceed = window.confirm('Are u sure?');
+    //     if (proceed) {
+    //         const url = `https://morning-garden-88599.herokuapp.com/order/${id}`;
+
+    //         fetch(url, {
+    //             method: 'delete'
+    //         })
+    //             .then(res => res.json())
+    //             .then(data => {
+    //                 console.log(data);
+    //                 const remaining = order.filter(order => order._id !== id);
+    //                 setOrder(remaining);
+    //             })
+    //     }
+    // }
+
+
+    // const handleDelete = (id) => {
+
+
+
+    //     fetch(`https://morning-garden-88599.herokuapp.com/order/${id}`, {
+    //         method: 'DELETE',
+    //         headers: {
+    //             "content-type": "application/json",
+    //             authorization: `Bearer ${localStorage.getItem('token')}`
+    //         }
+
+    //     })
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             console.log(data);
+    //             if (data.deletedCount) {
+
+    //                 alert('Order cancelled successfully')
+    //             }
+    //             else {
+    //                 alert(`Can't Cancel the Order`)
+    //             }
+    //         })
+
+    // }
 
     return (
         <div>
@@ -57,6 +103,7 @@ const MyOrder = () => {
                             <th>Price</th>
                             <th>Brand</th>
                             <th>Quantity</th>
+                            <th>Quantity</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -70,6 +117,10 @@ const MyOrder = () => {
                                 <td>{a.price}</td>
                                 <td>{a.brand}</td>
                                 <td>{a.quantity}</td>
+                                <td> <button
+                                    className='btn btn-primary btn-sm'
+
+                                >Remove</button></td>
 
                             </tr>)
                         }

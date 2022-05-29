@@ -13,7 +13,7 @@ const AllOrder = ({ service }) => {
     useEffect(() => {
         if (user) {
 
-            const url = `https://secure-journey-62088.herokuapp.com/user/order`;
+            const url = `https://morning-garden-88599.herokuapp.com/user/order`;
             fetch(url, {
                 method: 'GET',
                 headers: {
@@ -43,6 +43,7 @@ const AllOrder = ({ service }) => {
                             <th>Price</th>
                             <th>Brand</th>
                             <th>Quantity</th>
+                            <th>Remove</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -56,6 +57,10 @@ const AllOrder = ({ service }) => {
                                 <td>{a.price}</td>
                                 <td>{a.brand}</td>
                                 <td>{a.quantity}</td>
+                                <td> <button
+                                    className='btn btn-primary btn-sm'
+
+                                >Remove</button></td>
 
                             </tr>)
                         }

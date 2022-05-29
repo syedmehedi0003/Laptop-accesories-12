@@ -6,7 +6,7 @@ const UserRow = ({ user }) => {
 
 
     const makeAdmin = () => {
-        const url = `https://secure-journey-62088.herokuapp.com/user/admin/${email}`;
+        const url = `https://morning-garden-88599.herokuapp.com/user/admin/${email}`;
         fetch(url, {
             method: 'PUT',
             headers: {

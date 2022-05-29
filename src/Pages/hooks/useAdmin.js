@@ -7,7 +7,7 @@ const useAdmin = (user) => {
         const email = user?.email;
 
         if (email) {
-            fetch(`https://secure-journey-62088.herokuapp.com/admin/${email}`, {
+            fetch(`https://morning-garden-88599.herokuapp.com/admin/${email}`, {
 
 
                 method: 'GET',

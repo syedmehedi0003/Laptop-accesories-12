@@ -11,7 +11,7 @@ const ServiceDetail = () => {
     const [service, setService] = useState({});
 
     useEffect(() => {
-        const url = `https://secure-journey-62088.herokuapp.com/product/${serviceId}`;
+        const url = `https://morning-garden-88599.herokuapp.com/product/${serviceId}`;
 
         fetch(url)
             .then(res => res.json())
@@ -42,7 +42,7 @@ const ServiceDetail = () => {
 
         }
 
-        const url = `https://secure-journey-62088.herokuapp.com/order`;
+        const url = `https://morning-garden-88599.herokuapp.com/order`;
         console.log(url);
         fetch(url, {
             method: 'POST',

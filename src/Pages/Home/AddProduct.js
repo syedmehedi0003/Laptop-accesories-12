@@ -9,7 +9,7 @@ const AddProduct = () => {
     const onSubmit = data => {
         console.log(data);
 
-        const url = `https://secure-journey-62088.herokuapp.com/product`;
+        const url = `https://morning-garden-88599.herokuapp.com/product`;
         fetch(url, {
             method: 'POST',
             headers: {

@@ -32,7 +32,7 @@ const Profile = () => {
 
         }
 
-        const url = `https://secure-journey-62088.herokuapp.com/user/profile`;
+        const url = `https://morning-garden-88599.herokuapp.com/user/profile`;
         console.log(url);
         fetch(url, {
             method: 'PUT',

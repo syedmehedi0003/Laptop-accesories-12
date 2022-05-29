@@ -8,7 +8,6 @@ const UserReview = ({ review }) => {
 
             <div className="card-body text-center font-bold">
                 <p>Name: {name}</p>
-
                 <p>Ratting(Out of Five): {ratting}</p>
                 <p>Description: {commect}</p>
             </div>

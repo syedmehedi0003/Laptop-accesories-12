@@ -67,7 +67,7 @@ const Blog = () => {
                 don not use set products = [...].</p>
 
 
-            <p className='text-xl font-bold mt-8'>Q-06:What is unit test? Why shoud write unit tests?</p>
+            <p className='text-xl font-bold mt-8'>Q-05:What is unit test? Why shoud write unit tests?</p>
             <p>
                 Ans:
                 Unit testing:

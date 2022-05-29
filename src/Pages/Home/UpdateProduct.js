@@ -10,7 +10,7 @@ const UpdateProduct = () => {
     const [item, setItem] = useState({});
 
     useEffect(() => {
-        const url = `https://secure-journey-62088.herokuapp.com/product/${id}`;
+        const url = `https://morning-garden-88599.herokuapp.com/product/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setItem(data))
@@ -40,7 +40,7 @@ const UpdateProduct = () => {
 
         //send data
 
-        const url = `https://secure-journey-62088.herokuapp.com/product/${id}`;
+        const url = `https://morning-garden-88599.herokuapp.com/product/${id}`;
         fetch(url, {
             method: 'PATCH',
             headers: {

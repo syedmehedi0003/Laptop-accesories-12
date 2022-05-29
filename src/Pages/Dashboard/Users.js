@@ -16,7 +16,7 @@ const Users = () => {
     useEffect(() => {
         if (user) {
 
-            const url = `https://secure-journey-62088.herokuapp.com/user`;
+            const url = `https://morning-garden-88599.herokuapp.com/user`;
             fetch(url, {
                 method: 'GET',
                 headers: {

@@ -13,7 +13,6 @@ import ServiceDetail from './Pages/Home/ServiceDetail';
 import AddProduct from './Pages/Home/AddProduct';
 import ManageProduct from './Pages/Home/ManageProduct';
 import UpdateProduct from './Pages/Home/UpdateProduct';
-import Perchase from './Pages/Home/Portfolio';
 
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -25,7 +24,8 @@ import MyOrder from './Pages/Dashboard/MyOrder';
 import Users from './Pages/Dashboard/Users';
 import AddReview from './Pages/Home/AddReview';
 import Blog from './Pages/Home/Blog';
-import Portfolio from './Pages/Home/Portfolio';
+// import Portfolio from './Pages/Home/Portfolio';
+import Portfolio from './Pages/Home/Portfolio/Potfolio';
 
 
 
@@ -47,7 +47,11 @@ function App() {
             <UpdateProduct></UpdateProduct>
           } />
 
-          <Route path="portfolio" element={
+          {/* <Route path="portfolio" element={
+            <Portfolio></Portfolio>
+          } /> */}
+
+          <Route path="portfolio2" element={
             <Portfolio></Portfolio>
           } />
 
