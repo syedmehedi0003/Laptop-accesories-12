@@ -35,7 +35,6 @@ const Review = () => {
                     reviews.map((review) => <UserReview
                         key={review._id}
                         review={review}
-
                     ></UserReview>)
                 }
 
