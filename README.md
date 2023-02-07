@@ -2,32 +2,28 @@
 
 # Assignment 12
 
-## Assignment 12 Web  link [Click Here](https://laptop-parts-202a1.web.app/)
+## Assignment 12 Web link [Click Here](https://laptop-parts-202a1.web.app/)
+
 ## Assignment 12 Client Code link [Click Here](https://github.com/programming-hero-web-course1/manufacturer-website-client-side-syedmehedi0003)
 
-## Assignment 12 Server web link [Click Here](https://morning-garden-88599.herokuapp.com/product)
-## Assignment 12 Server Code  link [Click Here](https://github.com/programming-hero-web-course1/manufacturer-website-server-side-syedmehedi0003)
+## Assignment 12 Server web link [Click Here](https://laptop-accesories1.onrender.com/product)
+
+## Assignment 12 Server Code link [Click Here](https://github.com/programming-hero-web-course1/manufacturer-website-server-side-syedmehedi0003)
 
 ## Assignment 12 Admin Email (mehedihasanbahar@gmail.com)
-## Assignment 12 Admin Pass (123456)
 
+## Assignment 12 Admin Pass (123456)
 
 #### Note: Maje Maje MongoDb data load a problem kore, net slow or server problem er karone.
 
+### My Work Explanation
 
-### My Work Explanation  
 - React routes
 - Tailwind
 - React firebase hooks
-- Firebase 
+- Firebase
 - node.js
 - Mongodb
-
-
-
-
-
-
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
